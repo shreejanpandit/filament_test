@@ -18,7 +18,7 @@ class Client extends Model
      */
     public function agencies(): BelongsToMany
     {
-        return $this->belongsToMany(Agency::class, 'client_agency_tier', 'client_id', 'agency_id')
+        return $this->belongsToMany(Agency::class, 'client_agency_tiers', 'client_id', 'agency_id')
             ->withPivot('tier');
     }
 }
